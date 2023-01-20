@@ -30,5 +30,8 @@
 <symbol id="icon-star" viewBox="0 0 20 20">
 <path d="M10 1.3l2.388 6.722h6.412l-5.232 3.948 1.871 6.928-5.439-4.154-5.438 4.154 1.87-6.928-5.233-3.948h6.412l2.389-6.722z"></path>
 </symbol>
+<symbol id="icon-home3" viewBox="0 0 32 32">
+<path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+</symbol>
 </defs>
 </svg>
