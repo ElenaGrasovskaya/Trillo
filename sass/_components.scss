@@ -221,7 +221,7 @@
 .overview {
     display: flex;
     align-items: center;
-    border: 1px solid var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
     &__heading {
         font-size: 2.25rem;
         font-weight: 300;
@@ -243,13 +243,37 @@
     }
     &__location
     {
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        align-self: stretch;
+        
+ 
 
     }
-    &__rating-average {
-        color: var(--color-grey-light-4);
+    &__rating {
+        background-color: var(--color-primary);
+        margin-left: 3rem;
+        color: white;
+        
+        padding: 0 2.25rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-self: stretch;
+        
+    }
+
+    &__rating-avarage {
+        color: white;
+        font-size: 2.25rem;
+        font-weight: 300;
     }
     &__rating-count {
-        color: var(--color-grey-light-4);
+        font-size: .8rem;
+        text-transform: uppercase;
+  
     }
 }
 ////////////////////////////////////
