@@ -302,7 +302,10 @@ body {
     width: 1rem;
     margin-right: .7rem;
     background-image: url(../img/chevron-thin-right.svg);
-    background-size: cover; }
+    background-size: cover;
+    background-color: var(--color-primary);
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; }
 
 .recommend {
   font-size: 1.2rem;
