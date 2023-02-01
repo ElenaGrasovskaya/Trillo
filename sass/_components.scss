@@ -291,7 +291,68 @@
 
     &:hover {
         color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        }
     }
+
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+
+    }
+}
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    & > *
+    {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+       padding: 2rem 7.5rem;
+     }
+
+    &__invisible {
+
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover  &__visible {
+        transform: translateY(100%);
+    }
+    &:hover &__invisible {
+        top:0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulse 1s infinite;
+        transform: scale(1.05);
+    }
+    
 }
 
 ////////////////////////////////////
@@ -327,8 +388,8 @@
         //Newer browsers - masks
         background-color: var(--color-primary);
         
-       mask-image: url(../img/chevron-thin-right.svg);
-       mask-size: cover;
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
         
         
     }
@@ -363,3 +424,93 @@
         }
     }
  }
+
+ /// ////////////////////////////////////
+/// REVIEWS
+/// 
+/// 
+.review {
+
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &__text {
+        z-index: 10;
+        margin-bottom: 2rem;
+        text-align: justify;
+        position: relative;
+
+    }
+
+    &__photo {
+
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+    }
+
+    &__user-photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+
+    }
+
+    &__user-box {
+
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+    }
+
+    &__user-name {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.3rem;
+
+    }
+
+    &__rating {
+        flex: 0 0 10%;
+        font-size: 3rem;
+        color: var(--color-primary);
+        font-weight: lighter;
+
+    }
+
+    &::before {
+        content:"\201C";
+        font-family: 'Times New Roman', Times, serif;
+        position: absolute;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        top: -9rem;
+        left: -1rem;
+        z-index: 0;
+    }
+
+}
+
+ /// ////////////////////////////////////
+/// CALL TO ACTION
+/// 
+.cta {
+    flex: 1;
+
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+   
+}
